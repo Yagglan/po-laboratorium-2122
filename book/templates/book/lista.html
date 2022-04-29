@@ -1,0 +1,9 @@
+{% if lista_dan %}
+    <ul>
+    {% for danie in lista_dan %}
+        <li><a href="/book/{{ danie.id }}/">{{ danie.nazwa_dania }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
