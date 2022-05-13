@@ -1,0 +1,9 @@
+{% if lista_skladnikow %}
+    <ul>
+    {% for skladniki in lista_skladnikow %}
+        <li><a>{{ skladniki.nazwa_skladnika }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Brak skladnikow.</p>
+{% endif %}

@@ -16,3 +16,7 @@ def przepis(request, danie_id):
     Przepis = skladniki.objects.filter(danie__przepis=True)
     return render(request, 'book/przepis.html', {'Danie': Danie, 'Przepis': Przepis})
 
+def lista_skladnikow(request):
+    lista_skladnikow = skladniki.objects.order_by('nazwa_skladnika')
+    context = {'lista_skladnikow': lista_skladnikow}
+    return render(request, 'book/lista_skladnikow.html', context)
